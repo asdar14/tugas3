@@ -1,46 +1,40 @@
-// Example program
+//Tugas 2 - Soal-1 : Mencari dan mencetak nilai tengah dari 3 bilangan yang berbeda
+
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main()
-{
-  int A, B, C;
-  cout << "========================";
-  cout << "\nMenghitung Nilai Tengah";
-  cout << "\n========================";
-  
-  cout << "\nMasukan Nilai Pertama :";
-  cin >> A;
-  cout << "\nMasukan Nilai Kedua :";
-  cin >> B;
-  cout << "\nMasukan Nilai Ketiga :";
-  cin >> C;
-  
-  if (A < B && B < C)
-    cout << "Nilai Tengah :" << B;
-    else{
-    if(C < B && B < A)
-        cout << "Nilai Tengah :" << B;
-        else{
-        if(A < C && C < B)
-            cout << "Nilai Tengah :" << C;
-            else{
-            if(B < C && C < A)
-                cout << "Nilai Tengah :" << C;
-                else{
-                if(C < A && A < B)
-                    cout << "Nilai Tengah :" << A;
-                    else{
-                    if(A > B && A < C)
-                        cout << "Nilai Tengah :" << A;
-                        else
-                        cout << "Nila Tengah : -";
-                    }    
-                }        
-            }            
+{int A,B,C;
+ char repeat;
+ 
+ cout << "================================================";
+ cout << "\nProgram untuk mencari dan mencetak nilai tengah ";
+ cout << "\n================================================";
+
+ do{   
+    cout << "\n\nMasukkan 3 Angka\t: ";
+    cin >> A >> B >> C;
+ 
+    cout << "\nAngka 1 : " << A;
+    cout << "\nAngka 2 : " << B;
+    cout << "\nAngka 3 : " << C; 
+ 
+    if(A==B || A==B || B==C)
+        cout << "\n\nAngka harus berbeda!";
+    else if((A<B && B<C) || (C<B && B<A))
+        cout << "\n\nNilai Tengah adalah : " << B;
+    else    
+        {if((A<C && C<B) || (B<C && C<A))
+            cout << "\\nnNilai Tengah adalah : " << C;
+        else
+            cout << "\n\nNilai Tengah adalah : " << A;
         }
-    }
-    
+ 
+    cout << "\n\nCoba lagi? (Y) : ";
+    cin >>repeat;
+    }while(repeat=='y' || repeat=='Y');
+
+ return 0;
 }
+
