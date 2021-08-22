@@ -36,7 +36,8 @@ int main()
 
 cout << "\n\nCoba lagi? (Y) : ";
 cin >>repeat;
-    }while(repeat=='y' || repeat=='Y');
+    }
+    while(repeat=='y' || repeat=='Y');
 
 return 0;
 }
