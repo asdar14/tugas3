@@ -1,0 +1,35 @@
+// Example program
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+  int A, B, C;
+  cout << "========================";
+  cout << "\nMenentukan Jenis Segitiga";
+  cout << "\n========================";
+  
+  cout << "\nMasukan Nilai A :";
+  cin >> A;
+  cout << "\nMasukan Nilai B :";
+  cin >> B;
+  cout << "\nMasukan Nilai C :";
+  cin >> C;
+  
+  if (A == B && B == C)
+    cout << "Segitiga Sama Sisi";
+    else
+    { if (A == B || A == C)
+        cout << "Segitiga Sama Kaki";
+        else
+        { if (B == C)
+            cout << "Segitiga Sama Kaki";
+            else
+            cout << "Segitiga Sembarang";
+        }
+        
+    }
+    
+}
